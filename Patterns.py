@@ -44,3 +44,26 @@ def pattern6(N):
         print()
 
 #pattern6(5)
+
+def pattern7(N):
+    for i in range(N):
+        for j in range(N -i -1):
+            print(" ", end=" ")
+        for j in range(2*i + 1):
+             print("*", end=" ")
+        for j in range(N -i -1):
+            print(" ", end=" ")
+        print()
+            
+#pattern7(5)
+
+def pattern8(N):
+    for i in range(N):
+        for j in range(N):
+            print(" ", end=" ")
+        for j in range(N, 1, -2):
+             print("*", end=" ")
+        for j in range(N):
+            print(" ", end=" ")
+        print()
+pattern8(5)

@@ -37,11 +37,16 @@ def palindrome_number(num):
        
 #palindrome_number(121)
 
-def armstrong_number(num):
-    len_num = count_digits(num)
-    count = 0
-    for i in range(num):
-        count += count + i ** len_num
-    return count == num
 
-armstrong_number(153)
+def armstrong_number(num):
+    len_num = len(str(num))
+    res = 0
+    dup = num
+    while num > 0:
+        digit = num % 10
+        res += digit ** len_num
+        num = num // 10
+   
+    return res == dup
+
+#print(armstrong_number(153))
